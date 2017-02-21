@@ -41,6 +41,7 @@
                                 </state>
                                 <connections>
                                     <action selector="SignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWy-hQ-Sip"/>
+                                    <segue destination="qx2-xA-K6j" kind="showDetail" id="QJ0-bE-UgC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fex-Hw-GAL">
@@ -252,4 +253,7 @@
         <image name="1487699831_circle-next-arrow-disclosure-glyph" width="128" height="128"/>
         <image name="16832321_157380504770267_253578639218158759_n" width="189" height="95"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QJ0-bE-UgC"/>
+    </inferredMetricsTieBreakers>
 </document>
