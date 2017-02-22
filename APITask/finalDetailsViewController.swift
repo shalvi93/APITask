@@ -8,28 +8,55 @@
 
 import UIKit
 
+
 class finalDetailsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBOutlet weak var nameLabel: UILabel!
+   
+    @IBOutlet weak var emailLbl: UILabel!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var passwordlbl: UILabel!
+    
+    @IBOutlet weak var phonelbl: UILabel!
+    
+    @IBOutlet weak var cityLbl: UILabel!
+    
+    @IBOutlet weak var addresslbl: UILabel!
+   
+    @IBOutlet weak var countryLbl: UILabel!
+    
+    var  nameVar: String?
+    var emailVar: String?
+    var passwordVar: String?
+    var phoneVar: String?
+    var cityVar: String?
+   var addressVar: String?
+   var countryVar: String?
+    
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        nameLabel.text = nameVar
+        emailLbl.text = emailVar
+        passwordlbl.text = passwordVar
+        phonelbl.text = phoneVar
+        cityLbl.text = cityVar
+        addresslbl.text = addressVar
+        countryLbl.text = countryVar
+        
     }
-    */
+
+    
+    
+    
+    
+    
+    
+    
+    
+   
+
+    
 
 }

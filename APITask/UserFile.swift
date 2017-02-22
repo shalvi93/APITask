@@ -31,6 +31,8 @@ class User: Mappable {
 
 class Profile: Mappable {
     var username: String?
+    var password: String?
+
     var phone: String?
     var email: String?
      var country: String?
@@ -43,6 +45,7 @@ class Profile: Mappable {
     required init?(map: Map)
     {
         username <- map["username"]
+        password <- map["password"]
         phone <- map["phone"]
         email <- map[" email"]
         country <- map["country"]
@@ -53,6 +56,7 @@ class Profile: Mappable {
     func mapping(map: Map)
     {
         username <- map["username"]
+        password <- map["password"]
         phone <- map["phone"]
         email <- map[" email"]
         country <- map["country"]

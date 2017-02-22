@@ -10,5 +10,7 @@ target 'APITask' do
   pod 'M13Checkbox'
   pod 'Alamofire','~> 4.3’ 
   pod 'ObjectMapper', '~> 2.2'
+pod 'NVActivityIndicatorView'
+
 
 end

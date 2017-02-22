@@ -1,21 +1,24 @@
 PODS:
   - Alamofire (4.3.0)
   - M13Checkbox (3.1.3)
+  - NVActivityIndicatorView (3.4)
   - ObjectMapper (2.2.3)
   - SkyFloatingLabelTextField (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
   - M13Checkbox
+  - NVActivityIndicatorView
   - ObjectMapper (~> 2.2)
   - SkyFloatingLabelTextField (~> 2.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   M13Checkbox: c132a7e0eb964731855eff67b883a0b21b7c0977
+  NVActivityIndicatorView: 5754be63ceecd1df8af37d3c088d81872feeb8b8
   ObjectMapper: d3b3de11267f5d971f390eb8d63dd509116a4329
   SkyFloatingLabelTextField: 070e749632ffd608d6fd9db3fa488a822524997c
 
-PODFILE CHECKSUM: 7a8165c67813cd96d222abee66f300a651e64b0e
+PODFILE CHECKSUM: 5cb0e3a1e9fe706010b88196693a5230d1113102
 
 COCOAPODS: 1.2.0

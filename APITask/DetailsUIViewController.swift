@@ -20,12 +20,12 @@ class DetailsUIViewController: UIViewController {
     @IBOutlet weak var cityTxtF: SkyFloatingLabelTextField!
     @IBOutlet weak var AddresstxtF: SkyFloatingLabelTextField!
     @IBOutlet weak var CountryTxtF: SkyFloatingLabelTextField!
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
            fetchData()
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func forwardButton(_ sender: Any) {
@@ -109,6 +109,8 @@ class DetailsUIViewController: UIViewController {
             let alert = UIAlertController(title: "Hi", message: "\(name) you have successfully Logged In", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
             present(alert, animated: true, completion: nil)
+        
+        fetchData()
         }
         
         
@@ -179,4 +181,7 @@ class DetailsUIViewController: UIViewController {
 
 
 }
+    
+    
+
 }
