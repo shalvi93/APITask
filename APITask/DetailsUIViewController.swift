@@ -14,22 +14,14 @@ import ObjectMapper
 class DetailsUIViewController: UIViewController {
 
     @IBOutlet weak var nameTxtF: SkyFloatingLabelTextField!
-    
     @IBOutlet weak var emailTxtFild: SkyFloatingLabelTextField!
-    
-    
     @IBOutlet weak var passwordtxtF: SkyFloatingLabelTextField!
-    
-    
     @IBOutlet weak var phnNumbtxtF: SkyFloatingLabelTextField!
-    
     @IBOutlet weak var cityTxtF: SkyFloatingLabelTextField!
-    
     @IBOutlet weak var AddresstxtF: SkyFloatingLabelTextField!
-    
-    
     @IBOutlet weak var CountryTxtF: SkyFloatingLabelTextField!
     override func viewDidLoad() {
+    
         super.viewDidLoad()
            fetchData()
 
@@ -78,15 +70,39 @@ class DetailsUIViewController: UIViewController {
             alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
-        else if
-            (nameTxtF.text!.isEmpty || emailTxtFild.text!.isEmpty || phnNumbtxtF.text!.isEmpty || passwordtxtF.text!.isEmpty)
+        else if (passwordtxtF.text == "")
         {
-            
-            let alert = UIAlertController(title: "Sign up unscessful", message: "try again!", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Invalid", message: "password should be more than 5 digits", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
             
+        else if
+            (nameTxtF.text!.isEmpty || emailTxtFild.text!.isEmpty || phnNumbtxtF.text!.isEmpty || passwordtxtF.text!.isEmpty)
+        {
+                        let alert = UIAlertController(title: "Sign up unscessful", message: "try again!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        else if (cityTxtF.text == "")
+        {
+            let alert = UIAlertController(title: "Invalid", message: "password should be more than 5 digits", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        else if (AddresstxtF.text == "")
+        {
+            let alert = UIAlertController(title: "Invalid", message: "password should be more than 5 digits", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        else if (CountryTxtF.text == "")
+        {
+            let alert = UIAlertController(title: "Invalid", message: "password should be more than 5 digits", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+
         else
         {
             let name: String = nameTxtF.text!

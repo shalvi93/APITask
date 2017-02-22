@@ -32,15 +32,32 @@ class User: Mappable {
 class Profile: Mappable {
     var username: String?
     var phone: String?
+    var email: String?
+     var country: String?
+     var city : String?
+     var address: String?
     
-    required init?(map: Map){
+    
+
+    
+    required init?(map: Map)
+    {
         username <- map["username"]
         phone <- map["phone"]
+        email <- map[" email"]
+        country <- map["country"]
+        city <- map["city"]
+        address <- map["address"]
     }
     
-    func mapping(map: Map){
+    func mapping(map: Map)
+    {
         username <- map["username"]
         phone <- map["phone"]
+        email <- map[" email"]
+        country <- map["country"]
+        city <- map["city"]
+        address <- map["address"]
         
     }
 }
