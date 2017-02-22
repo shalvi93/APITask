@@ -86,7 +86,7 @@ class DetailsUIViewController: UIViewController {
         }
         else if (cityTxtF.text == "")
         {
-            let alert = UIAlertController(title: "Invalid", message: "password should be more than 5 digits", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Invalid", message: "Please enter", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
