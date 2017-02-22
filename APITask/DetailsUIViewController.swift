@@ -28,8 +28,10 @@ class DetailsUIViewController: UIViewController {
     @IBOutlet weak var AddresstxtF: SkyFloatingLabelTextField!
     
     
+    @IBOutlet weak var CountryTxtF: SkyFloatingLabelTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+           fetchData()
 
         // Do any additional setup after loading the view.
     }
@@ -64,7 +66,8 @@ class DetailsUIViewController: UIViewController {
         {
             let alert = UIAlertController(title: "Invalid", message: "password should be more than 5 digits", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
-            present(alert, animated: true, completion: nil)        }
+            present(alert, animated: true, completion: nil)
+        }
             
         
         else if !PhoneNumbervalidate(digitsvalue: phnNumbtxtF.text!)
@@ -140,15 +143,24 @@ class DetailsUIViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func fetchData()
+    {
+        
+        let param:[String:Any] = ["username":nameTxtF.text!,"email":emailTxtFild.text!,"password":passwordtxtF.text!,"phone":phnNumbtxtF.text!,"country":CountryTxtF.text!,"city":cityTxtF.text!,"address":AddresstxtF.text!,"flag":"1","birthday":"01/21/1995","country_code":"91","postal_code":"256","country_ino3":"158","state":"Panjab"]
+        
+       ApiHandler.fetchData(urlStr: "signup", parameters: param)
+        { (jsonData) in
+            
+            let userModel = Mapper<User>().map(JSONObject: jsonData)
+            print(userModel?.msg ?? "")
+            print(userModel?.profile?.username ?? "")
+            print(userModel?.profile?.email ?? "")
+            print(userModel?.profile?.phone ?? "")
+            print(userModel?.profile?.country ?? "")
+            print(userModel?.profile?.city ?? "")
+            print(userModel?.profile?.address ?? "")
+        }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+}
 }

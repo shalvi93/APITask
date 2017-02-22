@@ -231,11 +231,22 @@
                                     <action selector="forwardButton:" destination="qx2-xA-K6j" eventType="touchUpInside" id="eDP-We-781"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmp-PD-lqk" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="10" y="431" width="294" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Country"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="AddresstxtF" destination="jn6-ck-gyI" id="BV9-KY-4JX"/>
+                        <outlet property="CountryTxtF" destination="nmp-PD-lqk" id="13q-DX-i6h"/>
                         <outlet property="cityTxtF" destination="0nY-DT-k1g" id="SFS-sp-Xbf"/>
                         <outlet property="emailTxtFild" destination="eW0-sz-gRt" id="F1p-Dg-6TJ"/>
                         <outlet property="nameTxtF" destination="IWj-Vf-Do5" id="35q-68-Dac"/>
